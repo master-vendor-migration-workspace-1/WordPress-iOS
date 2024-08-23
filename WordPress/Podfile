@@ -1,0 +1,26 @@
+# Podfile
+
+platform :ios, '14.0'
+
+target 'MyApp' do
+  use_frameworks!
+
+  # External SDKs
+  pod 'Alamofire', '~> 5.4'
+  pod 'Firebase/Analytics', '~> 10.0'
+  pod 'SDWebImage', '~> 5.11'
+  pod 'GoogleMaps', '~> 7.0'
+  pod 'Stripe', '~> 22.0'
+  pod 'RealmSwift', '~> 10.20'
+  pod 'Crashlytics', '~> 10.0'
+
+  # Utility SDKs
+  pod 'IQKeyboardManagerSwift', '~> 6.5'
+  pod 'SwiftyJSON', '~> 5.0'
+  pod 'ReachabilitySwift', '~> 5.0'
+  pod 'Kingfisher', '~> 7.2'
+  pod 'KeychainSwift', '~> 20.0'
+  pod 'SnapKit', '~> 5.0'
+  pod 'Moya', '~> 15.0'
+
+end
