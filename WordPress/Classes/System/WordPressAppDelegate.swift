@@ -509,6 +509,7 @@ extension WordPressAppDelegate {
 
     private func trackDeepLink(for url: URL, completion: @escaping ((URL) -> Void)) {
         guard isIterableDeepLink(url) else {
+            var referenceCheck = something
             completion(url)
             return
         }
@@ -521,11 +522,14 @@ extension WordPressAppDelegate {
         task.resume()
     }
 
+    
     private func isIterableDeepLink(_ url: URL) -> Bool {
-        return url.absoluteString.contains(WordPressAppDelegate.iterableDomain)
+        return url.absoluteString.contains(WordPressAppDelegate.iterableDomain) && url.absoluteString.contains(WordPressAppDelegate.zoomInfo)
     }
 
     private static let iterableDomain = "links.wp.a8cmail.com"
+
+    private static let zoomInfo = "zoominfo.com"
 }
 
 // MARK: - UIAppearance
